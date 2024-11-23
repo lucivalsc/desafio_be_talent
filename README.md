@@ -1,8 +1,6 @@
 # Teste Técnico Mobile BeTalent
 
-Este é um repositório para Testes Técnicos em Mobile da Be. Ele é destinado a pessoas que participam de nossos processos seletivos. 
-
-Se você chegou até aqui por meio de um formulário de Teste Técnico, siga em frente. Caso contrário, acompanhe a BeTalent no [Linkedin](https://www.linkedin.com/company/betalenttech), [Instagram](https://www.instagram.com/betalent.tech/), [Facebook](https://web.facebook.com/bemobile.tech) ou na nossa newsletter [BeTalent Academy](https://beacademy.substack.com/). Divulgamos novos processos seletivos por lá.
+Este é um repositório com um Teste Técnico Mobile da Be.
 
 ## Desafio
 
@@ -14,9 +12,9 @@ Este é o [projeto em Figma](https://www.figma.com/design/Lpdera6rS8SztMUAwzkpN0
 
 ### Requisitos Gerais
 
-Deve-se utilizar React Native ou Flutter para a construção da aplicação.
+Utilizado Flutter para a construção da aplicação.
 
-É permitido utilizar libs externas, mas recomenda-se que seja o mínimo possível.
+Foi usado o mínimo possível de libs externas.
 
 A tabela deve conter as seguintes colunas:
 
@@ -30,35 +28,98 @@ Também deve ser possível realizar pesquisa na tabela por meio de um input. O i
 
 Datas e telefones devem ser formatadas no front-end e não na API.
 
-Tenha instaladas em sua máquina as ferramentas [Git](https://git-scm.com/), [Node.js](https://nodejs.org/en/) e [Yarn](https://yarnpkg.com/), e [React Native](https://reactnative.dev/) ou [Dart](https://dart.dev/) e [Flutter](https://flutter.dev/), para poder trabalhar no projeto.
-
-### Acesso aos dados da API simulada
-
-Para ter acesso aos dados que alimentarão o projeto, faça o seguinte:
-
-1. caso você não tenha, instale o pacote [json-server](https://github.com/typicode/json-server);
-2. clone este repositório do GitHub em sua máquina: [https://github.com/BeMobile/desafio-mobile](https://github.com/BeMobile/desafio-mobile);
-3. entre na pasta do projeto, em sua máquina, e, por meio da linha de comando, execute o comando `json-server --watch db.json`, para consumir a API simulada;
-4. inicie a estrutura e o desenvolvimento do projeto.
-
-É necessário deixar o json-server rodando no terminal para que os dados sejam visualizados no projeto.
-
-Caso você tenha problemas com o json-server, tente rodá-lo com `npx json-server db.json` ou 
-com `yarn json-server <path>/db.json`, em que `<path>` é o caminho completo até o diretório em que o arquivo db.json está localizado. Se mesmo assim não funcionar, busque ajuda na web.
-
 ### Critérios de Avaliação
 
 Em ordem de relevância, avaliaremos:
 
 1. lógica de programação;
 2. organização (do código e dos arquivos);
-3. proficiência no uso de React Native e/ou Flutter;
+3. proficiência no uso do Flutter;
 4. README, que deve conter, pelo menos, as seguintes informações: sobre o projeto, pré-requisitos e instruções para rodar a aplicação.
 
 É um diferencial na avaliação o uso de TypeScript.
 
-### Envio da Solução
+### Acesso aos dados da API simulada
 
-O projeto deverá ser hospedado em um repositório no seu GitHub. O link do repositório deverá ser fornecido por meio do formulário de Teste Técnico encaminhado ao seu e-mail. Não serão aceitos links de projetos enviados por outros meios.
+Para ter acesso aos dados que alimentarão o projeto, faça o seguinte:
 
-Demais instruções e regras serão instruídas nos formulários e nas comunicações do processo seletivo do qual você está participando.
+1. caso você não tenha, instale o pacote [json-server](https://github.com/typicode/json-server);
+2. clone este repositório do GitHub em sua máquina, na pasta desafio_server tem o arquivo database.json;
+3. entre na pasta do projeto, em sua máquina, e, por meio da linha de comando, execute o comando `json-server --watch <path>/database.json`, para consumir a API simulada;
+
+É necessário deixar o json-server rodando no terminal para que os dados sejam visualizados no projeto.
+
+Caso você tenha problemas com o json-server, tente rodá-lo com `npx json-server <path>/database.json` ou 
+com `yarn json-server <path>/database.json`, em que `<path>` é o caminho completo até o diretório em que o arquivo database.json está localizado. Se mesmo assim não funcionar, busque ajuda na web.
+
+### Link com vídeo de desenvolvimento do app e explicações
+Parte 1 - https://www.youtube.com/watch?v=fpJ4kL0sMHA
+Parte 2 - [https://youtu.be/Vt51bg3kL1k](https://youtu.be/Vt51bg3kL1k)
+
+### Instruções para Rodar a Aplicação Flutter
+
+### 1. Pré-requisitos
+- Instale o Flutter SDK.
+- Adicione o Flutter ao PATH do sistema.
+- Configure um editor de texto como o VS Code ou Android Studio.
+- Instale o JDK (Java Development Kit) para projetos que envolvam Android.
+- Configure o ambiente de desenvolvimento para iOS (em um Mac com Xcode instalado).
+
+### 2. Clonando o Repositório
+1. Obtenha o código-fonte da aplicação:
+   git clone <URL_DO_REPOSITORIO>
+
+2. Acesse a pasta do projeto:
+   cd <NOME_DO_PROJETO>
+   
+### 3. Instalando as Dependências
+- Instale todas as dependências do projeto Flutter com o comando:
+  flutter pub get
+
+### 4. Verifique a Configuração do Ambiente
+1. Confirme que o ambiente está configurado corretamente com:
+   flutter doctor
+   
+### 5. Alterar a URL do Servidor
+1. No aplicativo, localize o arquivo: lib\app\layers\presenter\providers\remote_provider.dart.
+2. Na linha 10, substitua a URL existente pelo IP da máquina onde o servidor está rodando:  var url = 'http://<NOVO IP>:3000/employees';
+3. Para encontrar o IP da máquina do servidor:
+- Abra um terminal na máquina onde o servidor está em execução.
+- Digite o comando:
+  ```ipconfig```
+- Localize o endereço IPv4 correspondente à sua conexão de rede.
+4. Atualize o IP no código para garantir a comunicação com o servidor.
+
+### 6. Rodando a Aplicação
+1. Conecte um dispositivo físico ou inicie um emulador (Android ou iOS).
+2. Execute o seguinte comando para rodar a aplicação:
+   flutter run
+
+3. Se necessário, especifique a plataforma:
+   - Para Android:
+     flutter run -d android
+   - Para iOS:
+     flutter run -d ios
+
+### 7. Executando em um Ambiente de Produção (Opcional)
+- Para gerar um build de produção:
+
+  - Para Android:
+    flutter build apk
+    ou
+    flutter build appbundle
+
+  - Para iOS:
+    flutter build ios
+
+### 8. Resolvendo Problemas Comuns
+- Se encontrar erros relacionados às dependências, atualize os pacotes:
+  flutter pub upgrade
+
+- Para limpar o cache do projeto, utilize:
+  flutter clean
+  flutter pub get
+
+### 9. Compartilhar Logs
+- Caso encontre problemas, compartilhe os logs do terminal para suporte:
+  flutter logs
