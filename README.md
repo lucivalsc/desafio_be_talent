@@ -82,7 +82,7 @@ Parte 2 - [https://youtu.be/Vt51bg3kL1k](https://youtu.be/Vt51bg3kL1k)
    
 ### 5. Alterar a URL do Servidor
 1. No aplicativo, localize o arquivo: lib\app\layers\presenter\providers\remote_provider.dart.
-2. Na linha 10, substitua a URL existente pelo IP da máquina onde o servidor está rodando:  var url = 'http://<NOVO IP>:3000/employees';
+2. Na linha 10, substitua a URL existente pelo IP da máquina onde o servidor está rodando:  var url = 'http://<NOVO_IP>:3000/employees';
 3. Para encontrar o IP da máquina do servidor:
 - Abra um terminal na máquina onde o servidor está em execução.
 - Digite o comando:
