@@ -18,11 +18,11 @@ Foi usado o mínimo possível de libs externas.
 
 A tabela deve conter as seguintes colunas:
 
-- imagem (thumb do/a usuário/a);
-- nome;
-- cargo
-- data de admissão;
-- telefone.
+   - imagem (thumb do/a usuário/a);
+   - nome;
+   - cargo
+   - data de admissão;
+   - telefone.
 
 Também deve ser possível realizar pesquisa na tabela por meio de um input. O input de pesquisa deve permitir filtrar dados por cargo, nome e telefone.
 
@@ -59,11 +59,11 @@ Parte 2 - [https://youtu.be/Vt51bg3kL1k](https://youtu.be/Vt51bg3kL1k)
 ### Instruções para Rodar a Aplicação Flutter
 
 ### 1. Pré-requisitos
-- Instale o Flutter SDK.
-- Adicione o Flutter ao PATH do sistema.
-- Configure um editor de texto como o VS Code ou Android Studio.
-- Instale o JDK (Java Development Kit) para projetos que envolvam Android.
-- Configure o ambiente de desenvolvimento para iOS (em um Mac com Xcode instalado).
+   - Instale o Flutter SDK.
+   - Adicione o Flutter ao PATH do sistema.
+   - Configure um editor de texto como o VS Code ou Android Studio.
+   - Instale o JDK (Java Development Kit) para projetos que envolvam Android.
+   - Configure o ambiente de desenvolvimento para iOS (em um Mac com Xcode instalado).
 
 ### 2. Clonando o Repositório
 1. Obtenha o código-fonte da aplicação:
@@ -73,8 +73,8 @@ Parte 2 - [https://youtu.be/Vt51bg3kL1k](https://youtu.be/Vt51bg3kL1k)
    cd <NOME_DO_PROJETO>
    
 ### 3. Instalando as Dependências
-- Instale todas as dependências do projeto Flutter com o comando:
-  flutter pub get
+   - Instale todas as dependências do projeto Flutter com o comando:
+     flutter pub get
 
 ### 4. Verifique a Configuração do Ambiente
 1. Confirme que o ambiente está configurado corretamente com:
@@ -83,11 +83,12 @@ Parte 2 - [https://youtu.be/Vt51bg3kL1k](https://youtu.be/Vt51bg3kL1k)
 ### 5. Alterar a URL do Servidor
 1. No aplicativo, localize o arquivo: lib\app\layers\presenter\providers\remote_provider.dart.
 2. Na linha 10, substitua a URL existente pelo IP da máquina onde o servidor está rodando:  var url = 'http://<NOVO_IP>:3000/employees';
-3. Para encontrar o IP da máquina do servidor:
-- Abra um terminal na máquina onde o servidor está em execução.
-- Digite o comando:
-  ```ipconfig```
-- Localize o endereço IPv4 correspondente à sua conexão de rede.
+   - Como melhoria, poderia definir um dartDefine e passar a url base, recuperar esse valor de maneira mais global.
+4. Para encontrar o IP da máquina do servidor:
+   - Abra um terminal na máquina onde o servidor está em execução.
+   - Digite o comando:
+     ```ipconfig```
+   - Localize o endereço IPv4 correspondente à sua conexão de rede.
 4. Atualize o IP no código para garantir a comunicação com o servidor.
 
 ### 6. Rodando a Aplicação
