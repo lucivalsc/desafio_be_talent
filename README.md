@@ -124,3 +124,6 @@ Parte 2 - [https://youtu.be/Vt51bg3kL1k](https://youtu.be/Vt51bg3kL1k)
 ### 9. Compartilhar Logs
 - Caso encontre problemas, compartilhe os logs do terminal para suporte:
   flutter logs
+  
+### 10. Vídeo do app funcionando
+https://github.com/user-attachments/assets/4c650050-e7dd-4340-8619-df56f4ffee40
