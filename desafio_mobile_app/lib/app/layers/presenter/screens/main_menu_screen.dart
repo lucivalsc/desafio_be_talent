@@ -33,7 +33,7 @@ class _MainMenuScreenState extends State<MainMenuScreen> {
   }
 
   searchEmployeer() {
-    List originals1 = widget.employeers!;
+    List originals1 = widget.employeers ?? [];
     if (searchBarText.isEmpty) {
       filtered1 = List.from(originals1);
     } else {
